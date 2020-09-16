@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cleveland Codes</title>
+    <script>
+        "use strict";
+
+
+        function clickMeWindow() {
+            clickMeWindow = window.open("JSlab5page2.html", "Pop Up", "width=300, height=300");
+        }
+
+        window.onload = function () {
+            document.getElementById("button").onclick = clickMeWindow;
+        }
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <button type="button" id="button">CLICK ME</button>
+
+</body>
+</html>
