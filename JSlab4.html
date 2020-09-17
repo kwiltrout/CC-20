@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8"/>
+   <style>
+   
+   </style>
+   <title>Lab 4 - Objects</title>
+   <pre>
+   <script>
+       "use strict";
+       function update() {
+           var d = new Date();
+           var todaysDate = d.getMonth() + 1 + "/" + d.getDate() + "/" + d.getFullYear();
+           document.getElementById("myDate").innerHTML = todaysDate;
+
+           var t = new Date();
+           var theTime = t.getHours() + ":" + t.getMinutes() + ":" + t.getSeconds();
+           document.getElementById("theTime").innerHTML = theTime;
+
+           var myText = document.getElementById("myText").value;
+           var myCharLength = myText.length;
+           document.getElementById("myCharLength").innerHTML = myCharLength;
+           document.getElementById("allCaps").innerHTML = myText.toUpperCase();
+       }
+       
+	  // function to read text and generate the output
+	  
+	  // window.onload function to set up vent for button click
+
+
+       window.onload = function () {
+           document.getElementById("button").onclick = update;
+           document.getElementById("myText").focus();
+       }
+   </script>
+   </pre>
+</head>
+<body>
+   <h2>Lab 4 - Objects</h2>
+   <textarea id="myText" rows="5" cols="40"></textarea>
+   <br /><br />
+   <button type="button" id="button">GO</button>
+   <br /><br />
+   The date is (Mon Date, Year): <span id="myDate"></span>
+   <br /><br />
+   The time is (Hr:Min:Sec AM): <span id="theTime"></span>
+   <br /><br />
+   Number of characters: <span id="myCharLength"></span>
+   <br /><br />
+   Text in ALL CAPS: <span id="allCaps"></span>
+</body>
+
+</html>
