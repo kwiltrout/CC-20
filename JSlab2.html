@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cleveland Codes</title>
+    <pre>
+        <script>
+            "use strict";
+            var fibNum;
+            var fibArray = [];
+            fibArray[0] = 0;
+            fibArray[1] = 1;
+
+            fibNum = prompt("How many?");
+            fibNum = parseInt(fibNum);
+            // check that fibNum >= 3
+            if (fibNum < 3) {
+                alert("Needs to be at least 3")
+            } else {
+                for (var i = 2; i < fibNum; i++) {
+                    fibArray[i] = fibArray[i - 1] + fibArray[i - 2];
+                }
+                for (var i = 0; i < fibNum; i++) {
+                    document.writeln(fibArray[i]);
+                }
+                var ratio = fibArray[fibNum - 1] / fibArray[fibNum - 2];
+                document.writeln("The Golden Number is " + ratio);
+
+            }
+        </script>
+    </pre>
+</head>
+<body>
+    <h1></h1>
+
+</body>
+</html>
