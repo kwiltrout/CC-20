@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cleveland Codes</title>
+    <pre>
+    <script>
+        "use strict";
+        var count = 0;
+        var min;
+        var max;
+        var userInput = 0;
+
+        while (userInput != -999) {
+            userInput = prompt("Enter a number:");
+            userInput = parseInt(userInput);
+
+            if (userInput != -999) {
+                count++;
+                if (count == 1) {
+                    max = userInput;
+                    min = userInput;
+                }
+
+            } else {
+                if (userInput > max) {
+                    max = userInput;
+                } else if (userInput < min) {
+                    min = userInput;
+                }
+            }
+        }
+
+        document.writeln("You entered " + count + " numbers");
+        document.writeln("The minumum value is " + min);
+        document.writeln("The maximum value is " + max);
+</script>
+    </pre>
+</head>
+<body>
+    <h1></h1>
+
+</body>
+</html>
